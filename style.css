@@ -1,94 +1,112 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
-/* HEADER NA RANGI YA #EBEBEB */
-header { 
-    background-color: #EBEBEB; 
-    padding: 15px 5%; 
-    position: sticky; 
-    top: 0; 
-    z-index: 1000; 
+/* HEADER - UKUBWA NA RANGI */
+header {
+    background-color: #10367D;
+    padding: 25px 5%; /* Ukubwa wa kutosha */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-.header-container { 
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.logo-text { 
-    font-family: 'Montserrat'; 
-    font-weight: bold; 
-    color: #10367D; 
-    font-size: 1.1rem; 
+.company-name-left {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #EBEBEB;
+    font-size: 1.3rem;
 }
 
-.menu-btn { 
-    font-family: 'Montserrat'; 
-    font-weight: bold; 
-    color: #10367D; 
-    cursor: pointer; 
+.menu-btn-right {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #EBEBEB;
+    cursor: pointer;
 }
 
-.logo-center img { height: 50px; }
+.logo-center img { height: 60px; }
 
-/* SECTIONS ZILIZO NA RANGI YA #10367D */
-.blue-section { 
-    background-color: #10367D; 
-    padding: 60px 10%; 
-    text-align: center; 
-    border-bottom: 2px solid #EBEBEB;
+/* NAFASI KUBWA (SPACING) */
+.section-spacer {
+    padding-top: 150px;    /* Nafasi kubwa juu */
+    padding-bottom: 150px; /* Nafasi kubwa chini */
 }
 
-.blue-section h2 { 
-    font-family: 'Montserrat'; 
-    color: #EBEBEB; 
-    margin-bottom: 20px; 
+/* BLUE SECTIONS */
+.blue-section {
+    background-color: #10367D;
+    text-align: center;
+    color: #EBEBEB;
+    border-bottom: 1px solid #EBEBEB;
 }
 
-.blue-section p { 
-    font-family: 'Poppins'; 
-    color: #EBEBEB; 
-    line-height: 1.8; 
+.section-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.blue-section h2 {
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+.blue-section p {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.8;
+    font-size: 1.1rem;
 }
 
 /* SERVICES */
-.services-vertical { padding: 50px 10%; background: #EBEBEB; }
-.section-title { font-family: 'Montserrat'; color: #10367D; text-align: center; margin-bottom: 40px; }
+.services-vertical {
+    background-color: #EBEBEB;
+    text-align: center;
+}
 
-.service-box { 
-    display: flex; 
-    flex-direction: column;
+.services-title {
+    font-family: 'Montserrat', sans-serif;
+    color: #10367D;
+    margin-bottom: 60px;
+    font-size: 2rem;
+}
+
+.service-card {
     background: #fff;
-    margin-bottom: 30px; 
-    border-radius: 10px;
+    margin: 40px auto;
+    max-width: 500px;
+    border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
-.service-box img { width: 100%; height: 200px; object-fit: cover; }
-.service-text { padding: 20px; text-align: center; }
+.service-card img { width: 100%; height: 250px; object-fit: cover; }
 
-.get-started-btn { 
-    background: #10367D; 
-    color: #EBEBEB; 
-    padding: 12px 25px; 
-    border: none; 
-    border-radius: 5px; 
-    font-family: 'Montserrat';
+.service-info { padding: 30px; }
+
+.get-started {
+    background-color: #10367D;
+    color: #EBEBEB;
+    border: none;
+    padding: 12px 30px;
+    font-family: 'Montserrat', sans-serif;
     font-weight: bold;
-    cursor: pointer; 
-    margin-top: 15px; 
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
 }
 
-/* GOOGLE LOGIN MODAL */
-.modal { display: none; position: fixed; z-index: 3000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); }
-.modal-content { background: #fff; margin: 30% auto; padding: 30px; width: 85%; border-radius: 15px; text-align: center; }
-.google-btn { background: #4285F4; color: white; padding: 12px; border-radius: 5px; font-family: 'Poppins'; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px; }
-
-/* CONTACT SECTION */
-.contact-section { background-color: #A5CE00; padding: 50px 10%; text-align: center; font-family: 'Montserrat'; }
+/* MODAL */
+.modal { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); }
+.modal-content { background: #fff; margin: 30% auto; padding: 40px; width: 80%; border-radius: 15px; text-align: center; }
+.google-login-btn { background: #4285F4; color: white; padding: 12px; border-radius: 5px; display: flex; align-items: center; justify-content: center; gap: 10px; font-family: 'Poppins'; cursor: pointer; }
 
 /* MENU OVERLAY */
-.overlay-menu { height: 0%; width: 100%; position: fixed; z-index: 2000; top: 0; left: 0; background-color: rgba(16, 54, 125, 0.98); transition: 0.5s; overflow: hidden; }
-.overlay-content { position: relative; top: 15%; text-align: center; }
+.overlay-menu { height: 0%; width: 100%; position: fixed; z-index: 3000; top: 0; left: 0; background-color: rgba(16, 54, 125, 0.95); transition: 0.5s; overflow: hidden; }
+.overlay-content { position: relative; top: 20%; text-align: center; }
 .overlay-content a { font-family: 'Montserrat'; color: #EBEBEB; text-decoration: none; font-size: 1.8rem; display: block; padding: 15px; }
