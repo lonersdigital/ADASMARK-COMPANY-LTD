@@ -12,9 +12,9 @@
 
     <header>
         <div class="header-container">
-            <div class="company-name">ADASMARK COMPANY L.t.d</div>
+            <div class="logo-text">ADASMARK</div>
             <div class="logo-center"><img src="logo.png" alt="Logo"></div>
-            <div class="menu-toggle" onclick="toggleMenu()">MENU ☰</div>
+            <div class="menu-btn" onclick="toggleMenu()">MENU</div>
         </div>
     </header>
 
@@ -30,80 +30,84 @@
         </div>
     </div>
 
-    <section id="our-company" class="our-company">
+    <section id="our-company" class="blue-section">
+        <h2>OUR COMPANY</h2>
         <div class="content">
             <p>“At our company, we bring convenience and creativity together under one roof. From dependable general supply and delicious catering services to innovative garden design and impactful social services, we are dedicated to enhancing everyday experiences. We pride ourselves on quality, efficiency, and building lasting relationships with our clients.”</p>
         </div>
     </section>
 
-    <section id="about-us" class="about-us">
+    <section id="about-us" class="blue-section">
+        <h2>ABOUT US</h2>
         <div class="content">
             <p>“We are a multi-service company driven by a passion for excellence and service delivery. From providing reliable general supplies and exceptional catering services to creating beautiful garden designs and supporting communities through social services, we are committed to making a positive impact. We believe in building long-term relationships with our clients through trust, quality, and consistency.”</p>
         </div>
     </section>
 
     <section id="services" class="services-vertical">
-        <h2 class="section-title">OUR SERVICES</h2>
+        <h2 class="section-title">SERVICES</h2>
         
-        <div class="service-box">
-            <img src="supply.jpg" alt="General Supply">
-            <div class="service-text">
-                <h3>General Supply</h3>
-                <p>Reliable and quality general supplies for all your needs.</p>
-                <button class="start-btn" onclick="showLogin()">Start Now</button>
-            </div>
-        </div>
-
         <div class="service-box">
             <img src="catering.jpg" alt="Catering">
             <div class="service-text">
                 <h3>Catering Services</h3>
                 <p>Delicious and professional catering for every event.</p>
-                <button class="start-btn" onclick="showLogin()">Start Now</button>
+                <button class="get-started-btn" onclick="showLogin()">GET STARTED</button>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <img src="supply.jpg" alt="General Supply">
+            <div class="service-text">
+                <h3>General Supply</h3>
+                <p>Dependable supplies tailored for your business needs.</p>
+                <button class="get-started-btn" onclick="showLogin()">GET STARTED</button>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <img src="social.jpg" alt="Social Services">
+            <div class="service-text">
+                <h3>Social Services</h3>
+                <p>Impactful social services dedicated to community growth.</p>
+                <button class="get-started-btn" onclick="showLogin()">GET STARTED</button>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <img src="garden.jpg" alt="Garden Design">
+            <div class="service-text">
+                <h3>Garden Design</h3>
+                <p>Innovative and creative garden designs for beautiful spaces.</p>
+                <button class="get-started-btn" onclick="showLogin()">GET STARTED</button>
             </div>
         </div>
     </section>
 
-    <div class="slider">
-        <div class="slide-track">
-            <div class="slide"><img src="picha1.jpg" alt=""></div>
-            <div class="slide"><img src="picha2.jpg" alt=""></div>
-            <div class="slide"><img src="picha3.jpg" alt=""></div>
-            <div class="slide"><img src="picha4.jpg" alt=""></div>
-            <div class="slide"><img src="picha1.jpg" alt=""></div>
-            <div class="slide"><img src="picha2.jpg" alt=""></div>
-        </div>
-    </div>
-
     <div id="loginModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="hideLogin()">&times;</span>
-            <h2 style="font-family: 'Montserrat';">LOGIN</h2>
-            <input type="email" placeholder="Email Address">
-            <input type="password" placeholder="Password">
-            <button class="login-submit">Submit</button>
+            <h2 style="font-family: 'Montserrat'; color: #10367D;">SIGN IN</h2>
+            <p style="font-family: 'Poppins'; margin-bottom: 20px;">Use your Google Email to continue</p>
+            <div class="google-btn">
+                <i class="fab fa-google"></i> Sign in with Google
+            </div>
         </div>
     </div>
 
     <footer id="contacts" class="contact-section">
-        <h2 style="font-family: 'Montserrat'; font-weight: bold;">CONTACT US</h2>
+        <h2>CONTACT US</h2>
         <div class="contact-info">
-            <p><i class="fas fa-envelope" style="color: #EBEBEB;"></i> ADASMARK.CO.LTD@GMAIL.COM</p>
-            <p><i class="fab fa-instagram" style="color: #EBEBEB;"></i> [Instagram Icon]</p>
-            <p><i class="fas fa-phone" style="color: #EBEBEB;"></i> [Namba Icon]</p>
+            <p><i class="fas fa-envelope"></i> ADASMARK.CO.LTD@GMAIL.COM</p>
+            <p><i class="fab fa-instagram"></i> [Instagram Icon]</p>
+            <p><i class="fas fa-phone"></i> [Namba Icon]</p>
         </div>
     </footer>
-
-    <div class="whatsapp-float">
-        <i class="fab fa-whatsapp"></i>
-        <span class="badge">1</span>
-    </div>
 
     <script>
         function toggleMenu() {
             var menu = document.getElementById("sideMenu");
-            if (menu.style.height === "100%") { menu.style.height = "0%"; }
-            else { menu.style.height = "100%"; }
+            menu.style.height = (menu.style.height === "100%") ? "0%" : "100%";
         }
         function showLogin() { document.getElementById("loginModal").style.display = "block"; }
         function hideLogin() { document.getElementById("loginModal").style.display = "none"; }
