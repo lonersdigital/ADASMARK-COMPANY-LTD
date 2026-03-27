@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ADASMARK COMPANY L.t.d</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,58 +13,82 @@
     <header>
         <div class="header-container">
             <div class="company-name">ADASMARK COMPANY L.t.d</div>
-            <div class="logo-center">
-                <img src="logo.png" alt="Logo"> </div>
-            <nav class="menu-right">
-                <div class="dropdown">
-                    <button class="dropbtn">MENU ☰</button>
-                    <div class="dropdown-content">
-                        <a href="#our-company">Our Company</a>
-                        <a href="#about-us">About Us</a>
-                        <a href="#services">Services</a>
-                        <a href="#contacts">Contacts</a>
-                        <a href="#directors">Company Directors</a>
-                        <a href="#support">Help & Support</a>
-                    </div>
-                </div>
-            </nav>
+            <div class="logo-center"><img src="logo.png" alt="Logo"></div>
+            <div class="menu-toggle" onclick="toggleMenu()">MENU ☰</div>
         </div>
     </header>
 
-    <section id="our-company" class="our-company">
-        <div class="content">
-            <p>“At our company, we bring convenience and creativity together under one roof. From dependable general supply and delicious catering services to innovative garden design and impactful social services, we are dedicated to enhancing everyday experiences. We pride ourselves on quality, efficiency, and building lasting relationships with our clients.”</p>
+    <div id="sideMenu" class="overlay-menu">
+        <a href="javascript:void(0)" class="closebtn" onclick="toggleMenu()">&times;</a>
+        <div class="overlay-content">
+            <a href="#our-company" onclick="toggleMenu()">Our Company</a>
+            <a href="#about-us" onclick="toggleMenu()">About Us</a>
+            <a href="#services" onclick="toggleMenu()">Services</a>
+            <a href="#contacts" onclick="toggleMenu()">Contacts</a>
+            <a href="#directors" onclick="toggleMenu()">Company Directors</a>
+            <a href="#support" onclick="toggleMenu()">Help & Support</a>
+        </div>
+    </div>
+
+    <section id="services" class="services-list">
+        <div class="service-row" id="service1">
+            <img src="supply.jpg" alt="General Supply">
+            <div class="service-info">
+                <h3>General Supply</h3>
+                <p>Dependable supplies for your business needs.</p>
+                <button class="start-btn" onclick="showLogin()">Start Now</button>
+            </div>
+        </div>
+        </section>
+
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="hideLogin()">&times;</span>
+            <h2>Ingia (Login)</h2>
+            <input type="email" placeholder="Baruapepe (Email)">
+            <input type="password" placeholder="Nywila (Password)">
+            <button class="login-submit">Ingia</button>
+        </div>
+    </div>
+
+    <div class="slider">
+        <div class="slide-track">
+            <div class="slide"><img src="img1.jpg" alt=""></div>
+            <div class="slide"><img src="img2.jpg" alt=""></div>
+            <div class="slide"><img src="img3.jpg" alt=""></div>
+            <div class="slide"><img src="img4.jpg" alt=""></div>
+            <div class="slide"><img src="img1.jpg" alt=""></div>
+        </div>
+    </div>
+
+    <section id="contacts" class="contact-section">
+        <h2>CONTACT US</h2>
+        <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <span>ADASMARK.CO.LTD@GMAIL.COM</span>
+        </div>
+        <div class="contact-item">
+            <i class="fab fa-instagram"></i>
+            <span>@adasmark_ltd</span>
+        </div>
+        <div class="contact-item">
+            <i class="fas fa-phone"></i>
+            <span>+255 XXX XXX XXX</span>
         </div>
     </section>
 
-    <section id="about-us" class="about-us">
-        <div class="content">
-            <p>“We are a multi-service company driven by a passion for excellence and service delivery. From providing reliable general supplies and exceptional catering services to creating beautiful garden designs and supporting communities through social services, we are committed to making a positive impact. We believe in building long-term relationships with our clients through trust, quality, and consistency.”</p>
-        </div>
-    </section>
+    <div class="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
+        <span class="badge">1</span>
+    </div>
 
-    <section id="services" class="services">
-        <h2>OUR SERVICES</h2>
-        <div class="services-grid">
-            <div class="service-card">
-                <img src="https://via.placeholder.com/300x200" alt="General Supply">
-                <div class="overlay"><h3>General Supply</h3></div>
-            </div>
-            <div class="service-card">
-                <img src="https://via.placeholder.com/300x200" alt="Catering">
-                <div class="overlay"><h3>Catering Services</h3></div>
-            </div>
-            <div class="service-card">
-                <img src="https://via.placeholder.com/300x200" alt="Garden Design">
-                <div class="overlay"><h3>Garden Design</h3></div>
-            </div>
-            <div class="service-card">
-                <img src="https://via.placeholder.com/300x200" alt="Social Services">
-                <div class="overlay"><h3>Social Services</h3></div>
-            </div>
-        </div>
-    </section>
-
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("sideMenu");
+            menu.style.height = menu.style.height === "100%" ? "0%" : "100%";
+        }
+        function showLogin() { document.getElementById("loginModal").style.display = "block"; }
+        function hideLogin() { document.getElementById("loginModal").style.display = "none"; }
+    </script>
 </body>
 </html>
-
