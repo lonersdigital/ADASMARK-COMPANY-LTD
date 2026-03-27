@@ -12,9 +12,9 @@
 
     <header>
         <div class="header-container">
-            <div class="logo-text">ADASMARK</div>
+            <div class="company-name-left">ADASMARK COMPANY L.t.d</div>
             <div class="logo-center"><img src="logo.png" alt="Logo"></div>
-            <div class="menu-btn" onclick="toggleMenu()">MENU</div>
+            <div class="menu-btn-right" onclick="toggleMenu()">MENU</div>
         </div>
     </header>
 
@@ -25,84 +25,55 @@
             <a href="#about-us" onclick="toggleMenu()">About Us</a>
             <a href="#services" onclick="toggleMenu()">Services</a>
             <a href="#contacts" onclick="toggleMenu()">Contacts</a>
-            <a href="#directors" onclick="toggleMenu()">Company Directors</a>
-            <a href="#support" onclick="toggleMenu()">Help & Support</a>
         </div>
     </div>
 
-    <section id="our-company" class="blue-section">
-        <h2>OUR COMPANY</h2>
-        <div class="content">
+    <section id="our-company" class="blue-section section-spacer">
+        <div class="section-container">
+            <h2>OUR COMPANY</h2>
             <p>“At our company, we bring convenience and creativity together under one roof. From dependable general supply and delicious catering services to innovative garden design and impactful social services, we are dedicated to enhancing everyday experiences. We pride ourselves on quality, efficiency, and building lasting relationships with our clients.”</p>
         </div>
     </section>
 
-    <section id="about-us" class="blue-section">
-        <h2>ABOUT US</h2>
-        <div class="content">
+    <section id="about-us" class="blue-section section-spacer">
+        <div class="section-container">
+            <h2>ABOUT US</h2>
             <p>“We are a multi-service company driven by a passion for excellence and service delivery. From providing reliable general supplies and exceptional catering services to creating beautiful garden designs and supporting communities through social services, we are committed to making a positive impact. We believe in building long-term relationships with our clients through trust, quality, and consistency.”</p>
         </div>
     </section>
 
-    <section id="services" class="services-vertical">
-        <h2 class="section-title">SERVICES</h2>
+    <section id="services" class="services-vertical section-spacer">
+        <h2 class="services-title">OUR SERVICES</h2>
         
-        <div class="service-box">
+        <div class="service-card">
             <img src="catering.jpg" alt="Catering">
-            <div class="service-text">
+            <div class="service-info">
                 <h3>Catering Services</h3>
                 <p>Delicious and professional catering for every event.</p>
-                <button class="get-started-btn" onclick="showLogin()">GET STARTED</button>
+                <button class="get-started" onclick="showLogin()">GET STARTED</button>
             </div>
         </div>
 
-        <div class="service-box">
+        <div class="service-card">
             <img src="supply.jpg" alt="General Supply">
-            <div class="service-text">
+            <div class="service-info">
                 <h3>General Supply</h3>
                 <p>Dependable supplies tailored for your business needs.</p>
-                <button class="get-started-btn" onclick="showLogin()">GET STARTED</button>
+                <button class="get-started" onclick="showLogin()">GET STARTED</button>
             </div>
         </div>
 
-        <div class="service-box">
-            <img src="social.jpg" alt="Social Services">
-            <div class="service-text">
-                <h3>Social Services</h3>
-                <p>Impactful social services dedicated to community growth.</p>
-                <button class="get-started-btn" onclick="showLogin()">GET STARTED</button>
-            </div>
-        </div>
-
-        <div class="service-box">
-            <img src="garden.jpg" alt="Garden Design">
-            <div class="service-text">
-                <h3>Garden Design</h3>
-                <p>Innovative and creative garden designs for beautiful spaces.</p>
-                <button class="get-started-btn" onclick="showLogin()">GET STARTED</button>
-            </div>
-        </div>
-    </section>
+        </section>
 
     <div id="loginModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="hideLogin()">&times;</span>
-            <h2 style="font-family: 'Montserrat'; color: #10367D;">SIGN IN</h2>
-            <p style="font-family: 'Poppins'; margin-bottom: 20px;">Use your Google Email to continue</p>
-            <div class="google-btn">
-                <i class="fab fa-google"></i> Sign in with Google
+            <h2>SIGN IN</h2>
+            <div class="google-login-btn">
+                <i class="fab fa-google"></i> Continue with Google
             </div>
         </div>
     </div>
-
-    <footer id="contacts" class="contact-section">
-        <h2>CONTACT US</h2>
-        <div class="contact-info">
-            <p><i class="fas fa-envelope"></i> ADASMARK.CO.LTD@GMAIL.COM</p>
-            <p><i class="fab fa-instagram"></i> [Instagram Icon]</p>
-            <p><i class="fas fa-phone"></i> [Namba Icon]</p>
-        </div>
-    </footer>
 
     <script>
         function toggleMenu() {
@@ -112,5 +83,6 @@
         function showLogin() { document.getElementById("loginModal").style.display = "block"; }
         function hideLogin() { document.getElementById("loginModal").style.display = "none"; }
     </script>
+
 </body>
 </html>
